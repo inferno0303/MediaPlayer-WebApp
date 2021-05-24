@@ -1,0 +1,33 @@
+.bottom_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+
+  background-color: #333333;
+  color: #f7f7f7;
+  opacity: 0.8;
+  border-top: #666666 1px solid;
+
+  cursor: pointer;
+  transition: all 300ms;
+}
+.bottom_wrapper:hover {
+  transform: scaleY(1.07) scaleX(1.02);
+  opacity: 1;
+  color: #0099ff;
+  height: 60px;
+}
+
+.flex_v {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 4px 20px 0 20px;
+}

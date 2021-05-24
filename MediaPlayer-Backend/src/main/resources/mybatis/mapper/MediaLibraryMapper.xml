@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teemo.mediaplayer.mapper.MediaLibraryMapper">
+
+    <select id="searchMediaLibrary" resultType="com.teemo.mediaplayer.entity.MediaLibrary">
+        SELECT * FROM media_library
+        where media_type=#{media_type}
+        <if test='artist != "null"'>
+            and artist=#{artist}
+        </if>
+        <if test='style != "null"'>
+            and style=#{style}
+        </if>
+        <if test='title != "null"'>
+            and title like concat('%', #{title}, '%')
+        </if>
+
+    </select>
+
+</mapper>
